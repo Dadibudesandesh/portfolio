@@ -1,1 +1,717 @@
 /* Portfolio V2 - Responsive Styles */
+
+/* =========================================================
+   PORTFOLIO V2 — RESPONSIVE DESIGN
+   Sandesh Dadibude
+   ========================================================= */
+
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   =========================================================
+
+   Desktop       : > 1024px
+   Tablet        : 769px - 1024px
+   Mobile        : 481px - 768px
+   Small Mobile  : <= 480px
+   Very Small    : <= 360px
+
+   NOTE:
+   Global styles belong in css/style.css.
+   Responsive layout overrides belong here.
+   ========================================================= */
+
+
+/* =========================================================
+   01. LARGE TABLET / SMALL DESKTOP
+   <= 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    :root {
+        --container-width: 1100px;
+        --container-padding: 1.5rem;
+    }
+
+
+    /* ---------- Typography ---------- */
+
+    h1 {
+        font-size: clamp(
+            2.5rem,
+            5.5vw,
+            3.5rem
+        );
+    }
+
+
+    h2 {
+        font-size: clamp(
+            1.9rem,
+            4vw,
+            2.5rem
+        );
+    }
+
+
+    /* ---------- Section spacing ---------- */
+
+    .section {
+        padding-block: 6rem;
+    }
+
+
+    /* ---------- Grids ---------- */
+
+    .grid-4 {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================================
+   02. TABLET
+   <= 1024px
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    :root {
+        --container-padding: 1.25rem;
+        --section-padding-y: 5.5rem;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+       ===================================================== */
+
+    .container {
+        width: min(
+            100% - 2.5rem,
+            var(--container-width)
+        );
+    }
+
+
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
+
+    h1 {
+        font-size: clamp(
+            2.35rem,
+            6vw,
+            3.5rem
+        );
+    }
+
+
+    h2 {
+        font-size: clamp(
+            1.8rem,
+            4.5vw,
+            2.5rem
+        );
+    }
+
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+
+    .section-description {
+        font-size: var(--text-base);
+    }
+
+
+    /* =====================================================
+       GRIDS
+       ===================================================== */
+
+    .grid-4 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .grid-3 {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .card {
+        padding: var(--space-6);
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .btn-lg {
+        min-height: 50px;
+
+        padding:
+            var(--space-3)
+            var(--space-6);
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+       =====================================================
+
+       The navbar component will use:
+       .nav-menu
+       .nav-toggle
+
+       The actual mobile menu behavior will be
+       controlled later by JavaScript.
+       ===================================================== */
+
+    .nav-menu {
+        gap: var(--space-5);
+    }
+
+
+    .nav-link {
+        font-size: var(--text-sm);
+    }
+}
+
+
+/* =========================================================
+   03. MOBILE / TABLET
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --container-padding: 1rem;
+        --section-padding-y: 4.5rem;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+       ===================================================== */
+
+    .container {
+        width: min(
+            100% - 2rem,
+            var(--container-width)
+        );
+    }
+
+
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
+
+    h1 {
+        font-size: clamp(
+            2.2rem,
+            9vw,
+            3rem
+        );
+
+        letter-spacing: -0.035em;
+    }
+
+
+    h2 {
+        font-size: clamp(
+            1.75rem,
+            7vw,
+            2.25rem
+        );
+    }
+
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+
+    p {
+        line-height: 1.7;
+    }
+
+
+    .section {
+        padding-block: var(--section-padding-y);
+    }
+
+
+    .section-header {
+        margin-bottom: var(--space-8);
+    }
+
+
+    .section-description {
+        font-size: var(--text-base);
+    }
+
+
+    /* =====================================================
+       GRIDS
+       ===================================================== */
+
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* =====================================================
+       FLEX
+       ===================================================== */
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .btn {
+        min-height: 44px;
+
+        padding:
+            var(--space-3)
+            var(--space-5);
+    }
+
+
+    .btn-lg {
+        width: 100%;
+
+        min-height: 50px;
+    }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .card {
+        padding: var(--space-6);
+
+        border-radius: var(--radius-md);
+    }
+
+
+    /* Disable large hover movement on touch devices */
+
+    .card:hover {
+        transform: none;
+    }
+
+
+    .btn:hover {
+        transform: none;
+    }
+
+
+    /* =====================================================
+       BADGES
+       ===================================================== */
+
+    .badges {
+        gap: var(--space-2);
+    }
+
+
+    .badge {
+        font-size: 0.7rem;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+       ===================================================== */
+
+    /*
+       Desktop:
+       .nav-menu is visible
+
+       Mobile:
+       .nav-menu becomes a hidden dropdown.
+
+       JavaScript will later toggle:
+       .nav-menu.active
+    */
+
+    .nav-menu {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+
+        padding:
+            var(--space-4)
+            var(--space-4);
+
+        background:
+            rgba(8, 11, 18, 0.97);
+
+        border-top:
+            1px solid var(--color-border);
+
+        border-bottom:
+            1px solid var(--color-border);
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        box-shadow: var(--shadow-md);
+
+        z-index: var(--z-header);
+    }
+
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+
+    .nav-link {
+        display: flex;
+
+        align-items: center;
+
+        width: 100%;
+
+        padding:
+            var(--space-3)
+            var(--space-4);
+
+        border-radius: var(--radius-sm);
+    }
+
+
+    .nav-link:hover {
+        background:
+            rgba(56, 189, 248, 0.06);
+    }
+
+
+    /*
+       Mobile hamburger button.
+       It will be hidden on desktop by default
+       in the main stylesheet/component styles.
+    */
+
+    .nav-toggle {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: 1px solid var(--color-border);
+
+        border-radius: var(--radius-md);
+
+        background: transparent;
+
+        color: var(--color-text);
+
+        font-size: var(--text-xl);
+    }
+
+
+    /* =====================================================
+       SPACING UTILITIES
+       ===================================================== */
+
+    .mt-12 {
+        margin-top: var(--space-8);
+    }
+
+
+    .mb-12 {
+        margin-bottom: var(--space-8);
+    }
+
+
+    .p-8 {
+        padding: var(--space-6);
+    }
+}
+
+
+/* =========================================================
+   04. SMALL MOBILE
+   <= 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        --container-padding: 0.875rem;
+        --section-padding-y: 4rem;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+       ===================================================== */
+
+    .container {
+        width: min(
+            100% - 1.75rem,
+            var(--container-width)
+        );
+    }
+
+
+    /* =====================================================
+       TYPOGRAPHY
+       ===================================================== */
+
+    h1 {
+        font-size: clamp(
+            2rem,
+            11vw,
+            2.65rem
+        );
+    }
+
+
+    h2 {
+        font-size: clamp(
+            1.65rem,
+            9vw,
+            2rem
+        );
+    }
+
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+
+    p {
+        font-size: var(--text-sm);
+        line-height: 1.7;
+    }
+
+
+    .section-label {
+        font-size: 0.7rem;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .btn {
+        width: 100%;
+    }
+
+
+    .btn-sm {
+        width: auto;
+    }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .card {
+        padding: var(--space-5);
+    }
+
+
+    .card-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    /* =====================================================
+       BADGES
+       ===================================================== */
+
+    .badges {
+        gap: 0.4rem;
+    }
+
+
+    .badge {
+        padding:
+            0.4rem
+            0.65rem;
+
+        font-size: 0.65rem;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+       ===================================================== */
+
+    .nav-menu {
+        padding:
+            var(--space-3)
+            var(--space-3);
+    }
+
+
+    .nav-link {
+        padding:
+            var(--space-3);
+    }
+
+
+    /* =====================================================
+       FLEX / ALIGNMENT
+       ===================================================== */
+
+    .items-center {
+        align-items: stretch;
+    }
+
+
+    /* =====================================================
+       SPACING
+       ===================================================== */
+
+    .gap-12 {
+        gap: var(--space-8);
+    }
+
+
+    .p-6 {
+        padding: var(--space-5);
+    }
+}
+
+
+/* =========================================================
+   05. VERY SMALL DEVICES
+   <= 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    :root {
+        --container-padding: 0.75rem;
+        --section-padding-y: 3.5rem;
+    }
+
+
+    .container {
+        width: min(
+            100% - 1.5rem,
+            var(--container-width)
+        );
+    }
+
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+
+    h2 {
+        font-size: 1.55rem;
+    }
+
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+
+    .card {
+        padding: var(--space-4);
+    }
+
+
+    .btn {
+        padding:
+            var(--space-3)
+            var(--space-4);
+
+        font-size: var(--text-sm);
+    }
+
+
+    .badge {
+        font-size: 0.6rem;
+    }
+}
+
+
+/* =========================================================
+   06. LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .section {
+        padding-block: 3rem;
+    }
+
+
+    .nav-menu {
+        max-height: 75vh;
+        overflow-y: auto;
+    }
+}
+
+
+/* =========================================================
+   07. TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .card:hover {
+        transform: none;
+    }
+
+
+    .btn:hover {
+        transform: none;
+    }
+
+
+    .underline-link::after {
+        display: none;
+    }
+}
