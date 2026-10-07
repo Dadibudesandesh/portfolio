@@ -1,360 +1,3006 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#080b12" />
+
+    <meta name="author" content="Sandesh Dadibude" />
+
+    <meta
+      name="description"
+      content="Sandesh Dadibude is a Java and Spring Boot Developer building reliable backend systems, REST APIs, database-driven applications, and full-stack projects."
+    />
+
+    <meta
+      name="keywords"
+      content="Sandesh Dadibude, Java Developer, Spring Boot Developer, Backend Developer, Software Developer, REST API, PostgreSQL, MySQL, Docker, AWS"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- =====================================================
+         PAGE TITLE
+    ====================================================== -->
+
+    <title>Sandesh Dadibude | Java & Spring Boot Developer</title>
+
+    <!-- =====================================================
+         CANONICAL URL
+         
+         IMPORTANT:
+         Replace this with your actual deployed portfolio URL.
+    ====================================================== -->
+
+    <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+
+    <!-- =====================================================
+         OPEN GRAPH / SOCIAL SHARING
+    ====================================================== -->
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:title"
+      content="Sandesh Dadibude | Java & Spring Boot Developer"
+    />
+
+    <meta
+      property="og:description"
+      content="Java and Spring Boot Developer building reliable backend systems, REST APIs, database-driven applications, and full-stack projects."
+    />
+
+    <meta property="og:url" content="https://YOUR-DOMAIN.com/" />
+
+    <meta
+      property="og:image"
+      content="https://YOUR-DOMAIN.com/images/profile/sandesh.jpg"
+    />
+
+    <meta property="og:site_name" content="Sandesh Dadibude Portfolio" />
+
+    <!-- =====================================================
+         TWITTER / X CARD
+    ====================================================== -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Sandesh Dadibude | Java & Spring Boot Developer"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Java and Spring Boot Developer building reliable software, backend systems, and full-stack applications."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://YOUR-DOMAIN.com/images/profile/sandesh.jpg"
+    />
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         
+         Inter  → Main UI / body font
+         JetBrains Mono → Technical labels / code style
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =====================================================
+         BOXICONS
+    ====================================================== -->
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- =====================================================
+         V2 STYLESHEETS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="stylesheet" href="css/animations.css" />
   </head>
-
   <body>
-    <header>
-      <a href="#home" class="logo">Sandesh's Portfolio</a>
-      <ul>
-        <li><a href="#home" style="--1: 1" class="active">Home</a></li>
-        <li><a href="#about" style="--1: 2">About</a></li>
-        <li><a href="#skills" style="--1: 3">Skills</a></li>
-        <li><a href="#services" style="--1: 5">Services</a></li>
-        <li><a href="#contact" style="--1: 5">Contact</a></li>
-      </ul>
+    <!-- =========================
+     SITE HEADER / NAVBAR
+========================= -->
+    <header class="site-header" id="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <!-- Logo / Brand -->
+          <a href="#home" class="logo" aria-label="Sandesh Dadibude - Home">
+            Sandesh<span>.dev</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+            <span class="nav-toggle-line"></span>
+          </button>
+
+          <!-- Primary Navigation -->
+          <div class="nav-wrapper" id="primary-navigation">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a href="#home" class="nav-link active"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#about" class="nav-link"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#journey" class="nav-link"> Journey </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#experience" class="nav-link"> Experience </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#skills" class="nav-link"> Skills </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#projects" class="nav-link"> Projects </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#achievements" class="nav-link"> Achievements </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#contact" class="nav-link"> Contact </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
+    <!-- =========================================================
+     HERO SECTION
+========================================================= -->
+
     <main>
-      <section class="firstSection" id="home">
-        <div class="leftSection">
-          <h3>Hello, It's Me</h3>
-          <h1>Sandesh Dadibude</h1>
-          <h3>And I'm a <span id="element"></span></h3>
-          <p>
-            Welcome to my portfolio! <br />
-            Here, you can learn everything about me — <br />
-            including my skills, services, contact information, and more.
-          </p>
+      <section class="hero section" id="home" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- =================================================
+                     HERO CONTENT
+                ================================================== -->
 
-          <a href="#about" class="btn-box">More About me</a>
-        </div>
+            <div class="hero-content">
+              <!-- Eyebrow -->
+              <div class="hero-eyebrow hero-reveal">
+                <span class="status-dot"></span>
 
-        <div class="rightSection">
-          <div class="gradient-border">
-            <img
-              src="images/myimage.jpg"
-              alt="sandesh image"
-              class="profile-img"
-            />
+                <span> Software Developer • Java &amp; Spring Boot </span>
+              </div>
+
+              <!-- Main Heading -->
+              <h1 class="hero-title hero-reveal" id="hero-title">
+                Building reliable software,
+                <span class="gradient-text"> one backend at a time. </span>
+              </h1>
+
+              <!-- Introduction -->
+              <p class="hero-description hero-reveal">
+                I'm Sandesh Dadibude, a Java and Spring Boot developer currently
+                pursuing my MCA, with hands-on experience in both software
+                development and quality assurance. I build backend systems, REST
+                APIs, database-driven applications, and full-stack projects with
+                a strong focus on clean code, reliability, and continuous
+                learning.
+              </p>
+
+              <!-- Current Role -->
+              <div class="hero-status hero-reveal">
+                <span class="hero-status-label"> Currently </span>
+
+                <span class="hero-status-value">
+                  Software Developer Intern @ MarkMyDigi Technologies
+                </span>
+              </div>
+
+              <!-- =================================================
+                         CTA BUTTONS
+                    ================================================== -->
+
+              <div class="hero-actions hero-reveal">
+                <a href="#projects" class="btn btn-primary btn-lg">
+                  <i class="bx bx-code-alt" aria-hidden="true"></i>
+
+                  <span> View My Projects </span>
+                </a>
+
+                <a
+                  href="assets/resume/Sandesh Resume (2).pdf"
+                  class="btn btn-secondary btn-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="bx bx-download" aria-hidden="true"></i>
+
+                  <span> Download Resume </span>
+                </a>
+              </div>
+
+              <!-- =================================================
+                         TECH HIGHLIGHTS
+                    ================================================== -->
+
+              <div class="hero-tech" aria-label="Primary technologies">
+                <span class="hero-tech-label"> Building with </span>
+
+                <div class="hero-tech-list">
+                  <span class="badge"> Java </span>
+
+                  <span class="badge"> Spring Boot </span>
+
+                  <span class="badge"> REST APIs </span>
+
+                  <span class="badge"> PostgreSQL </span>
+
+                  <span class="badge"> Docker </span>
+
+                  <span class="badge"> AWS </span>
+
+                  <span class="badge"> Git </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     HERO PROFILE AREA
+                ================================================== -->
+
+            <div class="hero-visual hero-reveal" aria-label="Developer profile">
+              <div class="hero-profile-card">
+                <!-- Decorative background -->
+                <div class="hero-profile-glow" aria-hidden="true"></div>
+
+                <!-- Profile Image -->
+                <div class="hero-profile-image">
+                  <img
+                    src="images/profile/FormalPhoto.png"
+                    alt="Sandesh Dadibude - Java and Spring Boot Developer"
+                    loading="eager"
+                    fetchpriority="high"
+                    width="120"
+                    height="120"
+                  />
+                </div>
+
+                <!-- Developer Badge -->
+                <div class="hero-profile-badge">
+                  <span class="status-dot"></span>
+
+                  <span> Open to Opportunities </span>
+                </div>
+
+                <!-- Floating Tech Card -->
+                <div class="hero-floating-card hero-floating-card-top">
+                  <i class="bx bxl-java" aria-hidden="true"></i>
+
+                  <div>
+                    <span class="floating-card-label"> Backend </span>
+
+                    <strong> Java </strong>
+                  </div>
+                </div>
+
+                <!-- Floating Spring Card -->
+                <div class="hero-floating-card hero-floating-card-bottom">
+                  <i class="bx bx-server" aria-hidden="true"></i>
+
+                  <div>
+                    <span class="floating-card-label"> Framework </span>
+
+                    <strong> Spring Boot </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- =====================================================
+             SCROLL INDICATOR
+        ====================================================== -->
+
+        <a
+          href="#about"
+          class="scroll-indicator"
+          aria-label="Scroll to About section"
+        >
+          <span> Scroll to explore </span>
+
+          <i class="bx bx-chevron-down" aria-hidden="true"></i>
+        </a>
       </section>
-      <section class="secondSection" id="about">
-        <div class="about">
-          <h1><span>About</span> Me</h1>
-        </div>
-        <div class="data">
-          <img src="images/devloper.png" alt="" />
-          <div class="info">
-            <p>
-              I am a recent BCA graduate with a strong foundation in
-              programming, software development, and database management. With a
-              particular interest in Java development and expertise in
-              frameworks like Spring Boot and Hibernate, I am passionate about
-              building efficient, scalable, and user-friendly applications..
-              Thank you for visiting my portfolio!
+      <!-- =========================================================
+     ABOUT SECTION
+========================================================= -->
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label"> About Me </span>
+
+            <h2 class="section-title" id="about-title">
+              From learning code to
+              <span class="gradient-text"> building real software. </span>
+            </h2>
+
+            <p class="section-description">
+              A developer focused on building practical applications, learning
+              through real projects, and continuously improving the way software
+              is developed and tested.
             </p>
-            <h5>&phone; : 9112432477</h5>
-            <h5>Email : sandeshdadibude28042004@gmail.com</h5>
-            <a href="assets/Sandesh [ Resume ].pdf" download class="resume-btn"
-              >Download Resume</a
+          </div>
+
+          <!-- =====================================================
+             ABOUT GRID
+        ====================================================== -->
+
+          <div class="about-grid">
+            <!-- =================================================
+                 DEVELOPER STORY
+            ================================================== -->
+
+            <article class="about-story card reveal reveal-left">
+              <div class="about-story-icon">
+                <i class="bx bx-code-alt" aria-hidden="true"></i>
+              </div>
+
+              <h3 class="card-title">My Developer Story</h3>
+
+              <div class="about-story-content">
+                <p>
+                  My journey into software development started with a strong
+                  foundation in computer applications during my BCA. What began
+                  with learning programming fundamentals gradually turned into
+                  building applications, working with databases, APIs, and
+                  backend technologies.
+                </p>
+
+                <p>
+                  As I worked on real projects, I became increasingly interested
+                  in Java and Spring Boot, especially in designing backend
+                  systems, REST APIs, authentication, database integration, and
+                  application architecture.
+                </p>
+
+                <p>
+                  My experience in quality assurance also changed the way I
+                  approach development. Testing, debugging, identifying defects,
+                  and thinking about edge cases taught me that good software is
+                  not only about making features work — it is also about making
+                  them reliable.
+                </p>
+
+                <p>
+                  Today, I am pursuing my MCA while working as a Software
+                  Developer Intern at MarkMyDigi Technologies. My goal is to
+                  grow into a strong Java and Spring Boot Developer who can
+                  design, build, test, and improve production-ready software.
+                </p>
+              </div>
+
+              <!-- Developer Approach -->
+
+              <div class="about-approach">
+                <span class="about-approach-label"> My Approach </span>
+
+                <div class="about-approach-flow">
+                  <span>Learn</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+
+                  <span>Build</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+
+                  <span>Test</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+
+                  <span>Debug</span>
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+
+                  <span>Improve</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 ABOUT HIGHLIGHTS
+            ================================================== -->
+
+            <div class="about-highlights">
+              <!-- Education -->
+
+              <article class="about-highlight-card card reveal reveal-right">
+                <div class="about-highlight-icon">
+                  <i class="bx bx-graduation" aria-hidden="true"></i>
+                </div>
+
+                <div class="about-highlight-content">
+                  <span class="about-highlight-label"> Education </span>
+
+                  <h3>Master of Computer Applications</h3>
+
+                  <p>
+                    Currently pursuing MCA and strengthening my understanding of
+                    software engineering, algorithms, databases, cloud
+                    computing, and application development.
+                  </p>
+
+                  <span class="about-highlight-meta">
+                    MCA • Currently Pursuing
+                  </span>
+                </div>
+              </article>
+
+              <!-- BCA Foundation -->
+
+              <article class="about-highlight-card card reveal reveal-right">
+                <div class="about-highlight-icon">
+                  <i class="bx bx-book-open" aria-hidden="true"></i>
+                </div>
+
+                <div class="about-highlight-content">
+                  <span class="about-highlight-label"> Foundation </span>
+
+                  <h3>Bachelor of Computer Applications</h3>
+
+                  <p>
+                    Built my programming and computer science foundation through
+                    BCA, developing an interest in Java, databases, web
+                    development, and software engineering.
+                  </p>
+
+                  <span class="about-highlight-meta"> BCA • Completed </span>
+                </div>
+              </article>
+
+              <!-- Experience -->
+
+              <article class="about-highlight-card card reveal reveal-right">
+                <div class="about-highlight-icon">
+                  <i class="bx bx-briefcase-alt-2" aria-hidden="true"></i>
+                </div>
+
+                <div class="about-highlight-content">
+                  <span class="about-highlight-label"> Experience </span>
+
+                  <h3>Development + Quality Engineering</h3>
+
+                  <p>
+                    Hands-on experience across software development and QA,
+                    giving me a broader understanding of building features,
+                    testing applications, debugging issues, and improving
+                    reliability.
+                  </p>
+
+                  <span class="about-highlight-meta">
+                    MarkMyDigi Technologies • Software Developer Intern
+                  </span>
+                </div>
+              </article>
+
+              <!-- Quality Mindset -->
+
+              <article class="about-highlight-card card reveal reveal-right">
+                <div class="about-highlight-icon">
+                  <i class="bx bx-check-shield" aria-hidden="true"></i>
+                </div>
+
+                <div class="about-highlight-content">
+                  <span class="about-highlight-label"> What I Bring </span>
+
+                  <h3>A Developer With a Quality Mindset</h3>
+
+                  <p>
+                    I think beyond implementation — considering maintainability,
+                    edge cases, API behavior, debugging, testing, and the
+                    overall reliability of an application.
+                  </p>
+
+                  <span class="about-highlight-meta">
+                    Learn • Build • Test • Improve
+                  </span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+     SKILLS SECTION
+========================================================= -->
+
+      <section
+        class="skills section"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label"> Technical Skills </span>
+
+            <h2 class="section-title" id="skills-title">
+              Technologies I use to
+              <span class="gradient-text"> build software. </span>
+            </h2>
+
+            <p class="section-description">
+              A practical technology stack built through projects, internships,
+              experimentation, and continuous learning.
+            </p>
+          </div>
+
+          <!-- =====================================================
+             CORE STACK
+        ====================================================== -->
+
+          <div class="skills-core reveal">
+            <div class="skills-core-header">
+              <div>
+                <span class="skills-core-label"> Core Stack </span>
+
+                <h3>Java + Spring Boot</h3>
+              </div>
+
+              <span class="skills-core-badge"> Primary Focus </span>
+            </div>
+
+            <div class="skills-core-list">
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bxl-java" aria-hidden="true"></i>
+                Java
+              </span>
+
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bx-layer" aria-hidden="true"></i>
+                Spring Boot
+              </span>
+
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bx-data" aria-hidden="true"></i>
+                Spring Data JPA
+              </span>
+
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bx-server" aria-hidden="true"></i>
+                Hibernate
+              </span>
+
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bx-cloud" aria-hidden="true"></i>
+                REST APIs
+              </span>
+
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bx-lock-alt" aria-hidden="true"></i>
+                JWT
+              </span>
+
+              <span class="skill-badge skill-badge-primary">
+                <i class="bx bx-package" aria-hidden="true"></i>
+                Maven
+              </span>
+            </div>
+          </div>
+
+          <!-- =====================================================
+             SKILL CATEGORIES
+        ====================================================== -->
+
+          <div class="skills-grid">
+            <!-- =================================================
+                 DATABASES
+            ================================================== -->
+
+            <article class="skill-category card reveal reveal-left">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <i class="bx bx-data" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="skill-category-label"> 01 </span>
+
+                  <h3>Databases</h3>
+                </div>
+              </div>
+
+              <p class="skill-category-description">
+                Designing and working with relational and NoSQL databases for
+                application development.
+              </p>
+
+              <div class="skill-list">
+                <span class="skill-tag"> PostgreSQL </span>
+
+                <span class="skill-tag"> MySQL </span>
+
+                <span class="skill-tag"> MongoDB </span>
+
+                <span class="skill-tag"> SQL </span>
+
+                <span class="skill-tag"> Database Design </span>
+
+                <span class="skill-tag"> JPA </span>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 FRONTEND
+            ================================================== -->
+
+            <article class="skill-category card reveal reveal-right">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <i class="bx bx-code" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="skill-category-label"> 02 </span>
+
+                  <h3>Frontend</h3>
+                </div>
+              </div>
+
+              <p class="skill-category-description">
+                Building responsive interfaces and connecting frontend
+                applications with backend APIs.
+              </p>
+
+              <div class="skill-list">
+                <span class="skill-tag"> HTML </span>
+
+                <span class="skill-tag"> CSS </span>
+
+                <span class="skill-tag"> JavaScript </span>
+
+                <span class="skill-tag"> React </span>
+
+                <span class="skill-tag"> Bootstrap </span>
+
+                <span class="skill-tag"> Thymeleaf </span>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 CLOUD & DEVOPS
+            ================================================== -->
+
+            <article class="skill-category card reveal reveal-left">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <i class="bx bx-cloud" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="skill-category-label"> 03 </span>
+
+                  <h3>Cloud &amp; DevOps</h3>
+                </div>
+              </div>
+
+              <p class="skill-category-description">
+                Working with cloud infrastructure, containers, source control,
+                and deployment workflows.
+              </p>
+
+              <div class="skill-list">
+                <span class="skill-tag"> AWS </span>
+
+                <span class="skill-tag"> Docker </span>
+
+                <span class="skill-tag"> Docker Compose </span>
+
+                <span class="skill-tag"> Git </span>
+
+                <span class="skill-tag"> GitHub </span>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 TESTING & MONITORING
+            ================================================== -->
+
+            <article class="skill-category card reveal reveal-right">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <i class="bx bx-check-shield" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="skill-category-label"> 04 </span>
+
+                  <h3>Testing &amp; Monitoring</h3>
+                </div>
+              </div>
+
+              <p class="skill-category-description">
+                Applying a quality mindset through functional testing, API
+                testing, performance testing, and application monitoring.
+              </p>
+
+              <div class="skill-list">
+                <span class="skill-tag"> Manual Testing </span>
+
+                <span class="skill-tag"> API Testing </span>
+
+                <span class="skill-tag"> Postman </span>
+
+                <span class="skill-tag"> k6 </span>
+
+                <span class="skill-tag"> Grafana </span>
+
+                <span class="skill-tag"> Prometheus </span>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 CORE CONCEPTS
+            ================================================== -->
+
+            <article class="skill-category card reveal reveal-left">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <i class="bx bx-brain" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="skill-category-label"> 05 </span>
+
+                  <h3>Core Concepts</h3>
+                </div>
+              </div>
+
+              <p class="skill-category-description">
+                Software engineering concepts that shape how I design,
+                implement, debug, and maintain applications.
+              </p>
+
+              <div class="skill-list">
+                <span class="skill-tag"> OOP </span>
+
+                <span class="skill-tag"> REST Architecture </span>
+
+                <span class="skill-tag"> CRUD </span>
+
+                <span class="skill-tag"> MVC </span>
+
+                <span class="skill-tag"> Authentication </span>
+
+                <span class="skill-tag"> Debugging </span>
+
+                <span class="skill-tag"> Version Control </span>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 CURRENTLY LEARNING
+            ================================================== -->
+
+            <article
+              class="skill-category card skill-category-learning reveal reveal-right"
             >
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <i class="bx bx-trending-up" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="skill-category-label"> 06 </span>
+
+                  <h3>Currently Learning</h3>
+                </div>
+              </div>
+
+              <p class="skill-category-description">
+                Areas I am actively exploring to become a stronger backend and
+                full-stack developer.
+              </p>
+
+              <div class="skill-list">
+                <span class="skill-tag skill-tag-learning">
+                  Advanced Java
+                </span>
+
+                <span class="skill-tag skill-tag-learning"> Spring Boot </span>
+
+                <span class="skill-tag skill-tag-learning">
+                  System Design
+                </span>
+
+                <span class="skill-tag skill-tag-learning">
+                  Docker &amp; Cloud
+                </span>
+
+                <span class="skill-tag skill-tag-learning"> AWS </span>
+
+                <span class="skill-tag skill-tag-learning"> DSA </span>
+
+                <span class="skill-tag skill-tag-learning"> React </span>
+
+                <span class="skill-tag skill-tag-learning"> CI/CD </span>
+              </div>
+            </article>
+          </div>
+
+          <!-- =====================================================
+             SKILLS FOOTNOTE
+        ====================================================== -->
+
+          <div class="skills-note reveal">
+            <i class="bx bx-info-circle" aria-hidden="true"></i>
+
+            <p>
+              My strongest focus is Java and Spring Boot backend development,
+              while my experience across databases, frontend, cloud, and QA
+              helps me understand the complete software development lifecycle.
+            </p>
           </div>
         </div>
       </section>
-      <section class="thiredSection" id="skills">
-        <div class="skills">
-          <h1>My<span> Skills</span></h1>
-        </div>
+
+      <!-- =========================================================
+     PROJECTS SECTION
+========================================================= -->
+
+      <section
+        class="projects section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
         <div class="container">
-          <div class="card">
-            <div class="percent" style="--clr: #f56d11; --num: 95">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>95 <span class="per"> %</span></h2>
-                <i class="bx bxl-html5" style="color: #f56d11"></i>
-              </div>
-              <h4 class="title" style="color: #f56d11">HTML</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="percent" style="--clr: #2470eb; --num: 85">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>85 <span class="per"> %</span></h2>
-                <i class="bx bxl-css3" style="color: #2470eb"></i>
-              </div>
-              <h4 class="title" style="color: #2470eb">CSS</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="percent" style="--clr: #f0db4f; --num: 70">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>75 <span class="per"> %</span></h2>
-                <i class="bx bxl-javascript" style="color: #f0db4f"></i>
-              </div>
-              <h4 class="title" style="color: #f0db4f">JAVASCRIPT</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="percent" style="--clr: #f89820; --num: 85">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>85 <span class="per">%</span></h2>
-                <i class="bx bxl-java" style="color: #f89820"></i>
-              </div>
-              <h4 class="title" style="color: #f89820">Java</h4>
-            </div>
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label"> Selected Work </span>
+
+            <h2 class="section-title" id="projects-title">
+              Projects built with
+              <span class="gradient-text"> purpose. </span>
+            </h2>
+
+            <p class="section-description">
+              A selection of applications I've designed and built while learning
+              backend development, databases, APIs, cloud technologies, and
+              full-stack development.
+            </p>
           </div>
 
-          <div class="card">
-            <div class="percent" style="--clr: #6db33f; --num: 80">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>80 <span class="per">%</span></h2>
-                <i class="bx bxl-spring-boot" style="color: #6db33f"></i>
+          <!-- =====================================================
+             FEATURED PROJECT
+        ====================================================== -->
+
+          <article class="project-featured card reveal">
+            <!-- Project Visual -->
+
+            <div class="project-featured-visual">
+              <div class="project-window">
+                <div class="project-window-header">
+                  <div class="project-window-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+
+                  <span class="project-window-title"> Mandi Tracker </span>
+                </div>
+
+                <div class="project-window-body">
+                  <img
+                    src="images/projects/mandi-tracker.png"
+                    alt="Mandi Tracker application interface"
+                    loading="lazy"
+                    width="900"
+                    height="560"
+                  />
+                </div>
               </div>
-              <h4 class="title" style="color: #6db33f">Spring Boot</h4>
             </div>
-          </div>
-          <div class="card">
-            <div class="percent" style="--clr: #59666c; --num: 75">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>75 <span class="per">%</span></h2>
-                <i class="bx bx-leaf" style="color: #59666c"></i>
+
+            <!-- Project Content -->
+
+            <div class="project-featured-content">
+              <div class="project-featured-top">
+                <span class="project-label"> Featured Project </span>
+
+                <span class="project-status">
+                  <span class="status-dot"></span>
+                  In Development
+                </span>
               </div>
-              <h4 class="title" style="color: #59666c">Hibernate</h4>
+
+              <h3 class="project-title">Mandi Tracker</h3>
+
+              <p class="project-description">
+                A web application designed to help users track agricultural
+                mandi prices and market information. The project focuses on
+                connecting a React frontend with a Spring Boot backend and
+                PostgreSQL database, with integration of official market data as
+                the application evolves.
+              </p>
+
+              <!-- Outcome -->
+
+              <div class="project-outcome">
+                <span class="project-outcome-label"> What I worked on </span>
+
+                <p>
+                  Designed the backend structure, REST APIs, database
+                  integration, and data-import workflow while working toward
+                  reliable and up-to-date market data.
+                </p>
+              </div>
+
+              <!-- Tech Stack -->
+
+              <div class="project-tech">
+                <span class="project-tech-label"> Tech Stack </span>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> Java </span>
+
+                  <span class="project-tech-tag"> Spring Boot </span>
+
+                  <span class="project-tech-tag"> PostgreSQL </span>
+
+                  <span class="project-tech-tag"> React </span>
+
+                  <span class="project-tech-tag"> REST API </span>
+                </div>
+              </div>
+
+              <!-- Links -->
+
+              <div class="project-actions">
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm"
+                  aria-label="View Mandi Tracker project"
+                >
+                  <i class="bx bx-link-external" aria-hidden="true"></i>
+
+                  View Project
+                </a>
+
+                <a
+                  href="https://github.com/Dadibudesandesh/mandi-tracker"
+                  class="btn btn-ghost btn-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Mandi Tracker source code on GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+
+                  Source Code
+                </a>
+              </div>
             </div>
+          </article>
+
+          <!-- =====================================================
+             PROJECT GRID
+        ====================================================== -->
+
+          <div class="projects-grid">
+            <!-- =================================================
+                 LIBRARY MANAGEMENT SYSTEM
+            ================================================== -->
+
+            <article class="project-card card reveal reveal-left">
+              <div class="project-image">
+                <img
+                  src="images/projects/library-management.png"
+                  alt="Library Management System"
+                  loading="lazy"
+                  width="800"
+                  height="500"
+                />
+
+                <div class="project-image-overlay">
+                  <a
+                    href="https://github.com/Dadibudesandesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Library Management System source code"
+                  >
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <span class="project-label"> Backend Application </span>
+
+                  <h3>Library Management System</h3>
+                </div>
+
+                <p class="project-description">
+                  A role-based library management application for managing
+                  students, books, borrowing, and book requests through a Spring
+                  Boot backend and web interface.
+                </p>
+
+                <div class="project-outcome compact">
+                  <strong> Outcome: </strong>
+
+                  <span>
+                    Built CRUD workflows, role-based flows, database
+                    relationships, and borrowing logic.
+                  </span>
+                </div>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> Java </span>
+
+                  <span class="project-tech-tag"> Spring Boot </span>
+
+                  <span class="project-tech-tag"> JPA </span>
+
+                  <span class="project-tech-tag"> Hibernate </span>
+
+                  <span class="project-tech-tag"> MySQL </span>
+
+                  <span class="project-tech-tag"> Thymeleaf </span>
+                </div>
+
+                <a
+                  href="https://github.com/Dadibudesandesh/LibrarySystem"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 BANKING APPLICATION
+            ================================================== -->
+
+            <article class="project-card card reveal reveal-right">
+              <div class="project-image">
+                <img
+                  src="images/projects/banking-application.png"
+                  alt="Banking Application"
+                  loading="lazy"
+                  width="800"
+                  height="500"
+                />
+
+                <div class="project-image-overlay">
+                  <a
+                    href="https://github.com/Dadibudesandesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Banking Application source code"
+                  >
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <span class="project-label"> Full-Stack Application </span>
+
+                  <h3>Banking Application</h3>
+                </div>
+
+                <p class="project-description">
+                  A banking application focused on backend business logic,
+                  account operations, API communication, and a React-based
+                  frontend.
+                </p>
+
+                <div class="project-outcome compact">
+                  <strong> Outcome: </strong>
+
+                  <span>
+                    Practiced backend API design, data handling, authentication
+                    concepts, and frontend-backend integration.
+                  </span>
+                </div>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> Java </span>
+
+                  <span class="project-tech-tag"> Spring Boot </span>
+
+                  <span class="project-tech-tag"> REST API </span>
+
+                  <span class="project-tech-tag"> React </span>
+
+                  <span class="project-tech-tag"> Database </span>
+                </div>
+
+                <a
+                  href="https://github.com/Dadibudesandesh"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 TOURS & TRAVEL
+            ================================================== -->
+
+            <article class="project-card card reveal reveal-left">
+              <div class="project-image">
+                <img
+                  src="images/projects/travel-management.png"
+                  alt="Tours and Travel Management System"
+                  loading="lazy"
+                  width="800"
+                  height="500"
+                />
+
+                <div class="project-image-overlay">
+                  <a
+                    href="https://github.com/Dadibudesandesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Tours and Travel Management System source code"
+                  >
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <span class="project-label"> Web Application </span>
+
+                  <h3>Tours &amp; Travel Management System</h3>
+                </div>
+
+                <p class="project-description">
+                  A web application developed to manage travel services,
+                  packages, and customer-oriented travel workflows.
+                </p>
+
+                <div class="project-outcome compact">
+                  <strong> Outcome: </strong>
+
+                  <span>
+                    Built a database-driven application and gained practical
+                    experience with CRUD operations and web application
+                    structure.
+                  </span>
+                </div>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> PHP </span>
+
+                  <span class="project-tech-tag"> MySQL </span>
+
+                  <span class="project-tech-tag"> HTML </span>
+
+                  <span class="project-tech-tag"> CSS </span>
+
+                  <span class="project-tech-tag"> JavaScript </span>
+                </div>
+
+                <a
+                  href="https://github.com/Dadibudesandesh"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 QUIZ APPLICATION
+            ================================================== -->
+
+            <article class="project-card card reveal reveal-right">
+              <div class="project-image">
+                <img
+                  src="images/projects/quiz-application.png"
+                  alt="Quiz Application"
+                  loading="lazy"
+                  width="800"
+                  height="500"
+                />
+
+                <div class="project-image-overlay">
+                  <a
+                    href="https://github.com/Dadibudesandesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Quiz Application source code"
+                  >
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <span class="project-label"> Backend Application </span>
+
+                  <h3>Quiz Application</h3>
+                </div>
+
+                <p class="project-description">
+                  A quiz application built to manage questions, answers, quiz
+                  workflows, and persistent application data.
+                </p>
+
+                <div class="project-outcome compact">
+                  <strong> Outcome: </strong>
+
+                  <span>
+                    Practiced REST-based application development, database
+                    persistence, and backend business logic.
+                  </span>
+                </div>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> Java </span>
+
+                  <span class="project-tech-tag"> Spring Boot </span>
+
+                  <span class="project-tech-tag"> PostgreSQL </span>
+
+                  <span class="project-tech-tag"> REST API </span>
+                </div>
+
+                <a
+                  href="https://github.com/Dadibudesandesh"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 FLASHCARD APPLICATION
+            ================================================== -->
+
+            <article class="project-card card reveal reveal-left">
+              <div class="project-image">
+                <img
+                  src="images/projects/flashcard-application.png"
+                  alt="Flashcard Application"
+                  loading="lazy"
+                  width="800"
+                  height="500"
+                />
+
+                <div class="project-image-overlay">
+                  <a
+                    href="https://github.com/Dadibudesandesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Flashcard Application source code"
+                  >
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <span class="project-label"> Spring Boot Application </span>
+
+                  <h3>Flashcard Application</h3>
+                </div>
+
+                <p class="project-description">
+                  A learning-focused application for creating, managing, and
+                  working with flashcards through a Spring Boot backend.
+                </p>
+
+                <div class="project-outcome compact">
+                  <strong> Outcome: </strong>
+
+                  <span>
+                    Strengthened understanding of Spring Boot, MVC architecture,
+                    CRUD operations, and persistence.
+                  </span>
+                </div>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> Java </span>
+
+                  <span class="project-tech-tag"> Spring Boot </span>
+
+                  <span class="project-tech-tag"> JPA </span>
+
+                  <span class="project-tech-tag"> Database </span>
+
+                  <span class="project-tech-tag"> Thymeleaf </span>
+                </div>
+
+                <a
+                  href="https://github.com/Dadibudesandesh"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 PIGGMY MANAGEMENT
+            ================================================== -->
+
+            <article class="project-card card reveal reveal-right">
+              <div class="project-image">
+                <div class="project-image-placeholder">
+                  <i class="bx bx-wallet" aria-hidden="true"></i>
+
+                  <span> Piggmy Management System </span>
+                </div>
+
+                <div class="project-image-overlay">
+                  <a
+                    href="https://github.com/Dadibudesandesh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Piggmy Management System source code"
+                  >
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-card-heading">
+                  <span class="project-label"> Management System </span>
+
+                  <h3>Piggmy Management System</h3>
+                </div>
+
+                <p class="project-description">
+                  A management application developed as a practical project for
+                  handling application data and business-oriented workflows.
+                </p>
+
+                <div class="project-outcome compact">
+                  <strong> Outcome: </strong>
+
+                  <span>
+                    Practiced application design, database operations, business
+                    workflows, and project presentation.
+                  </span>
+                </div>
+
+                <div class="project-tech-list">
+                  <span class="project-tech-tag"> Java </span>
+
+                  <span class="project-tech-tag"> Spring Boot </span>
+
+                  <span class="project-tech-tag"> Database </span>
+                </div>
+
+                <a
+                  href="https://github.com/Dadibudesandesh"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Source
+                  <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
           </div>
 
-          <div class="card">
-            <div class="percent" style="--clr: #ff9900; --num: 65">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>65 <span class="per">%</span></h2>
-                <i class="bx bxl-amazon" style="color: #ff9900"></i>
-              </div>
-              <h4 class="title" style="color: #ff9900">AWS</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="percent" style="--clr: #00758f; --num: 80">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>80 <span class="per">%</span></h2>
-                <i class="bx bxl-mysql" style="color: #00758f"></i>
-              </div>
-              <h4 class="title" style="color: #00758f">MySQL</h4>
-            </div>
-          </div>
-          <div class="card">
-            <div class="percent" style="--clr: #171515; --num: 70">
-              <div class="dot"></div>
-              <svg>
-                <circle cx="75" cy="75" r="70"></circle>
-                <circle cx="75" cy="75" r="70"></circle>
-              </svg>
-              <div class="number">
-                <h2>70 <span class="per">%</span></h2>
-                <i class="bx bxl-github" style="color: #171515"></i>
-              </div>
-              <h4 class="title" style="color: #171515">Git / GitHub</h4>
-            </div>
+          <!-- =====================================================
+             PROJECT FOOTER
+        ====================================================== -->
+
+          <div class="projects-footer reveal">
+            <p>
+              More experiments, learning projects, and source code are available
+              on my GitHub.
+            </p>
+
+            <a
+              href="https://github.com/Dadibudesandesh"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxl-github" aria-hidden="true"></i>
+
+              View GitHub
+            </a>
           </div>
         </div>
       </section>
-      <section class="services" id="services">
+
+      <!-- =========================================================
+     EXPERIENCE SECTION
+========================================================= -->
+
+      <section
+        class="experience section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
         <div class="container">
-          <h1 class="sub-title">My <span>Services</span></h1>
-          <div class="services-list">
-            <!-- UI/UX DESIGN -->
-            <div>
-              <i class="bx bxl-sketch" style="color: rgb(154, 84, 177)"></i>
-              <h2>UI/UX Design</h2>
-              <p>
-                I design user-centric, responsive interfaces that blend
-                aesthetics with functionality. With tools like Figma and Adobe
-                XD, I focus on creating clean, accessible, and intuitive layouts
-                that elevate user experiences for both web and mobile platforms.
-              </p>
-              <a href="#" class="read">Learn More....</a>
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label"> Experience </span>
+
+            <h2 class="section-title" id="experience-title">
+              Building software with a
+              <span class="gradient-text"> quality mindset. </span>
+            </h2>
+
+            <p class="section-description">
+              My experience across software development and quality assurance
+              has helped me understand both how to build software and how to
+              make it reliable.
+            </p>
+          </div>
+
+          <!-- =====================================================
+             EXPERIENCE TIMELINE
+        ====================================================== -->
+
+          <div class="experience-timeline">
+            <!-- =================================================
+                 SOFTWARE DEVELOPER INTERN
+            ================================================== -->
+
+            <article
+              class="experience-item experience-current reveal reveal-right"
+            >
+              <!-- Timeline -->
+              <div class="experience-timeline-marker">
+                <span class="experience-dot"></span>
+              </div>
+
+              <!-- Experience Content -->
+              <div class="experience-content card">
+                <div class="experience-header">
+                  <div class="experience-heading">
+                    <span class="experience-role-label"> Current Role </span>
+
+                    <h3>Software Developer Intern</h3>
+
+                    <p class="experience-company">MarkMyDigi Technologies</p>
+                  </div>
+
+                  <div class="experience-meta">
+                    <span class="experience-date"> 2026 – Present </span>
+
+                    <span class="experience-status">
+                      <span class="status-dot"></span>
+                      Current
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Summary -->
+
+                <p class="experience-summary">
+                  Working as a Software Developer Intern with a focus on
+                  understanding development workflows, building application
+                  features, working with backend systems, and continuously
+                  improving my software engineering skills.
+                </p>
+
+                <!-- Responsibilities -->
+
+                <div class="experience-block">
+                  <span class="experience-block-label"> Focus Areas </span>
+
+                  <ul class="experience-list">
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Working with software development workflows and
+                        application features.
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Applying Java and backend development concepts to
+                        practical software projects.
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Working with APIs, databases, Git, debugging, and
+                        collaborative development practices.
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Learning how development decisions affect application
+                        reliability, maintainability, and user experience.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Technologies -->
+
+                <div class="experience-technologies">
+                  <span class="experience-block-label"> Technologies </span>
+
+                  <div class="experience-tech-list">
+                    <span class="experience-tech-tag"> Java </span>
+
+                    <span class="experience-tech-tag"> Spring Boot </span>
+
+                    <span class="experience-tech-tag"> REST APIs </span>
+
+                    <span class="experience-tech-tag"> SQL </span>
+
+                    <span class="experience-tech-tag"> Git </span>
+
+                    <span class="experience-tech-tag"> GitHub </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 QA ENGINEER INTERN
+            ================================================== -->
+
+            <article class="experience-item reveal reveal-left">
+              <!-- Timeline -->
+              <div class="experience-timeline-marker">
+                <span class="experience-dot"></span>
+              </div>
+
+              <!-- Experience Content -->
+              <div class="experience-content card">
+                <div class="experience-header">
+                  <div class="experience-heading">
+                    <span class="experience-role-label"> Previous Role </span>
+
+                    <h3>QA Engineer Intern</h3>
+
+                    <p class="experience-company">Cleverground Ltd.</p>
+                  </div>
+
+                  <div class="experience-meta">
+                    <span class="experience-date">
+                      March 2026 – June 2026
+                    </span>
+
+                    <span class="experience-status experience-status-completed">
+                      Completed
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Summary -->
+
+                <p class="experience-summary">
+                  Worked on manual quality assurance for a live institute
+                  management platform, gaining practical experience in testing
+                  application modules, identifying defects, documenting issues,
+                  and understanding software quality in a real project.
+                </p>
+
+                <!-- Responsibilities -->
+
+                <div class="experience-block">
+                  <span class="experience-block-label"> Responsibilities </span>
+
+                  <ul class="experience-list">
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Performed manual and module-level testing across
+                        application workflows.
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Reported defects, maintained testing logs, and followed
+                        up on reported issues.
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Participated in stand-ups and worked with the team
+                        during testing and issue-resolution cycles.
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="bx bx-check" aria-hidden="true"></i>
+
+                      <span>
+                        Gained hands-on exposure to application monitoring and
+                        performance-testing workflows.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Tools -->
+
+                <div class="experience-technologies">
+                  <span class="experience-block-label">
+                    Tools &amp; Technologies
+                  </span>
+
+                  <div class="experience-tech-list">
+                    <span class="experience-tech-tag"> Manual Testing </span>
+
+                    <span class="experience-tech-tag"> API Testing </span>
+
+                    <span class="experience-tech-tag"> Postman </span>
+
+                    <span class="experience-tech-tag"> k6 </span>
+
+                    <span class="experience-tech-tag"> Grafana </span>
+
+                    <span class="experience-tech-tag"> Prometheus </span>
+
+                    <span class="experience-tech-tag"> Docker </span>
+                  </div>
+                </div>
+
+                <!-- Quality Mindset -->
+
+                <div class="experience-highlight">
+                  <i class="bx bx-bulb" aria-hidden="true"></i>
+
+                  <div>
+                    <strong>
+                      What this experience added to my development
+                    </strong>
+
+                    <p>
+                      A stronger habit of thinking about edge cases, defects,
+                      API behavior, performance, and reliability before
+                      considering a feature complete.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- =====================================================
+             EXPERIENCE SUMMARY
+        ====================================================== -->
+
+          <div class="experience-summary-card reveal">
+            <div class="experience-summary-icon">
+              <i class="bx bx-code-curly" aria-hidden="true"></i>
             </div>
 
-            <!-- FRONTEND DEVELOPMENT -->
             <div>
-              <i class="bx bxs-paint-roll" style="color: rgb(154, 84, 177)"></i>
-              <h2>Frontend Development</h2>
-              <p>
-                I build responsive and visually appealing websites using HTML5,
-                CSS3, JavaScript, and Bootstrap. I ensure cross-browser
-                compatibility, fast load times, and pixel-perfect designs —
-                optimized for both performance and user engagement.
-              </p>
-              <a href="#" class="read">Learn More....</a>
-            </div>
+              <span class="experience-summary-label">
+                My Engineering Perspective
+              </span>
 
-            <!-- BACKEND DEVELOPMENT -->
-            <div>
-              <i class="bx bx-code-curly" style="color: rgb(154, 84, 177)"></i>
-              <h2>Backend Development</h2>
               <p>
-                Skilled in Java, Spring Boot, and MySQL, I develop scalable and
-                secure server-side applications. I manage APIs, databases,
-                session handling, and authentication logic to power real-world
-                web applications with efficient backend workflows.
+                Development taught me how to build. QA taught me how to question
+                what I build. Together, they help me approach software with both
+                a developer mindset and a quality mindset.
               </p>
-              <a href="#" class="read">Learn More....</a>
-            </div>
-            <div>
-              <i class="bx bx-layer" style="color: rgb(154, 84, 177)"></i>
-              <h2>Full Stack Projects</h2>
-              <p>
-                I’ve built and deployed full-stack applications including
-                Library Management Systems and Travel Portals using Spring Boot,
-                MySQL, HTML, and JS. I handle both client-side UI and
-                server-side logic with clean code practices.
-              </p>
-              <a href="#" class="read">Learn More....</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="fourthSection" id="contact">
-        <div class="contact">
-          <h4><span>Contact</span> Me</h4>
+
+      <!-- =========================================================
+     JOURNEY SECTION
+========================================================= -->
+      <section
+        class="journey section"
+        id="journey"
+        aria-labelledby="journey-title"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label">Journey</span>
+
+            <h2 class="section-title" id="journey-title">
+              From learning the basics to
+              <span class="gradient-text"> building real software. </span>
+            </h2>
+
+            <p class="section-description">
+              My journey has been a continuous progression through education,
+              projects, quality assurance, and software development — with Java
+              and Spring Boot becoming my primary direction.
+            </p>
+          </div>
+
+          <!-- Journey Timeline -->
+          <div class="journey-timeline">
+            <!-- =====================================================
+                 01 — BCA
+            ====================================================== -->
+            <article class="journey-item reveal reveal-left">
+              <div class="journey-marker">
+                <span class="journey-number">01</span>
+              </div>
+
+              <div class="journey-content card">
+                <div class="journey-top">
+                  <div>
+                    <span class="journey-period"> Foundation </span>
+
+                    <h3>Bachelor of Computer Applications</h3>
+
+                    <p class="journey-place">BCA</p>
+                  </div>
+
+                  <span class="journey-icon">
+                    <i class="bx bx-book-open" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <p class="journey-description">
+                  My BCA gave me the foundation to understand programming,
+                  databases, software development, computer applications, and
+                  problem-solving.
+                </p>
+
+                <div class="journey-tags">
+                  <span>Programming Fundamentals</span>
+                  <span>Database Concepts</span>
+                  <span>OOP</span>
+                  <span>Problem Solving</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =====================================================
+                 02 — FIRST PROJECTS
+            ====================================================== -->
+            <article class="journey-item reveal reveal-right">
+              <div class="journey-marker">
+                <span class="journey-number">02</span>
+              </div>
+
+              <div class="journey-content card">
+                <div class="journey-top">
+                  <div>
+                    <span class="journey-period"> Building Phase </span>
+
+                    <h3>Learning by Building Projects</h3>
+
+                    <p class="journey-place">From concepts to applications</p>
+                  </div>
+
+                  <span class="journey-icon">
+                    <i class="bx bx-code-alt" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <p class="journey-description">
+                  Instead of learning technology only through theory, I started
+                  turning concepts into working applications. This helped me
+                  understand how frontend interfaces, backend logic, APIs,
+                  databases, and application workflows connect.
+                </p>
+
+                <div class="journey-projects">
+                  <div class="journey-project">
+                    <i class="bx bx-library" aria-hidden="true"></i>
+                    <span>Library Management System</span>
+                  </div>
+
+                  <div class="journey-project">
+                    <i class="bx bx-building" aria-hidden="true"></i>
+                    <span>Banking Application</span>
+                  </div>
+
+                  <div class="journey-project">
+                    <i class="bx bx-map" aria-hidden="true"></i>
+                    <span>Tours &amp; Travel System</span>
+                  </div>
+
+                  <div class="journey-project">
+                    <i class="bx bx-data" aria-hidden="true"></i>
+                    <span>Mandi Tracker</span>
+                  </div>
+                </div>
+
+                <div class="journey-tags">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>MySQL</span>
+                  <span>PostgreSQL</span>
+                  <span>REST APIs</span>
+                  <span>Git</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =====================================================
+                 03 — CLEVERGROUND
+            ====================================================== -->
+            <article class="journey-item reveal reveal-left">
+              <div class="journey-marker">
+                <span class="journey-number">03</span>
+              </div>
+
+              <div class="journey-content card">
+                <div class="journey-top">
+                  <div>
+                    <span class="journey-period"> March 2026 – June 2026 </span>
+
+                    <h3>QA Engineer Intern</h3>
+
+                    <p class="journey-place">Cleverground Ltd.</p>
+                  </div>
+
+                  <span class="journey-icon">
+                    <i class="bx bx-check-shield" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <p class="journey-description">
+                  My QA internship introduced me to real-world software quality
+                  practices. I worked with application modules, identified and
+                  reported defects, maintained testing logs, and followed issues
+                  through the testing cycle.
+                </p>
+
+                <div class="journey-learning">
+                  <div class="journey-learning-item">
+                    <i class="bx bx-test-tube" aria-hidden="true"></i>
+                    <div>
+                      <strong>Testing</strong>
+                      <span> Manual and module-level testing </span>
+                    </div>
+                  </div>
+
+                  <div class="journey-learning-item">
+                    <i class="bx bx-bug" aria-hidden="true"></i>
+                    <div>
+                      <strong>Defect Thinking</strong>
+                      <span>
+                        Finding, documenting, and following up on issues
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="journey-learning-item">
+                    <i class="bx bx-line-chart" aria-hidden="true"></i>
+                    <div>
+                      <strong>Performance</strong>
+                      <span> Exposure to k6 and monitoring workflows </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="journey-tags">
+                  <span>Manual Testing</span>
+                  <span>API Testing</span>
+                  <span>Postman</span>
+                  <span>k6</span>
+                  <span>Grafana</span>
+                  <span>Prometheus</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =====================================================
+                 04 — MCA
+            ====================================================== -->
+            <article class="journey-item reveal reveal-right">
+              <div class="journey-marker">
+                <span class="journey-number">04</span>
+              </div>
+
+              <div class="journey-content card">
+                <div class="journey-top">
+                  <div>
+                    <span class="journey-period"> Current Education </span>
+
+                    <h3>Master of Computer Applications</h3>
+
+                    <p class="journey-place">MCA</p>
+                  </div>
+
+                  <span class="journey-icon">
+                    <i class="bx bx-graduation" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <p class="journey-description">
+                  Alongside practical experience, I continued my academic
+                  journey with MCA. It is helping me strengthen my understanding
+                  of algorithms, databases, cloud computing, software
+                  engineering, and advanced computing concepts.
+                </p>
+
+                <div class="journey-tags">
+                  <span>Advanced Java</span>
+                  <span>DBMS</span>
+                  <span>DAA</span>
+                  <span>Cloud Computing</span>
+                  <span>Docker</span>
+                  <span>System Design</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =====================================================
+                 05 — MARKMYDIGI
+            ====================================================== -->
+            <article class="journey-item journey-current reveal reveal-left">
+              <div class="journey-marker">
+                <span class="journey-number">05</span>
+              </div>
+
+              <div class="journey-content card">
+                <div class="journey-top">
+                  <div>
+                    <span class="journey-period journey-current-label">
+                      2026 – Present
+                    </span>
+
+                    <h3>Software Developer Intern</h3>
+
+                    <p class="journey-place">MarkMyDigi Technologies</p>
+                  </div>
+
+                  <span class="journey-icon journey-current-icon">
+                    <i class="bx bx-code-curly" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <p class="journey-description">
+                  I am currently growing as a software developer, applying my
+                  Java and backend knowledge to practical development workflows
+                  while learning how software is built collaboratively and
+                  maintained as a real product.
+                </p>
+
+                <div class="journey-current-grid">
+                  <div>
+                    <span class="journey-current-label-small"> Focus </span>
+
+                    <p>
+                      Backend development, APIs, databases, debugging, Git, and
+                      software engineering practices.
+                    </p>
+                  </div>
+
+                  <div>
+                    <span class="journey-current-label-small"> Direction </span>
+
+                    <p>
+                      Becoming a strong Java &amp; Spring Boot Developer capable
+                      of building reliable production-ready applications.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="journey-tags">
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>REST APIs</span>
+                  <span>SQL</span>
+                  <span>Git</span>
+                  <span>GitHub</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- =====================================================
+             JOURNEY END / GOAL
+        ====================================================== -->
+          <div class="journey-goal reveal">
+            <div class="journey-goal-icon">
+              <i class="bx bx-target-lock" aria-hidden="true"></i>
+            </div>
+
+            <div class="journey-goal-content">
+              <span class="journey-goal-label"> Where I'm Going </span>
+
+              <h3>Java &amp; Spring Boot Developer</h3>
+
+              <p>
+                My journey is still in progress. I am focused on becoming a
+                backend-focused developer who can design, build, test, debug,
+                and continuously improve reliable software.
+              </p>
+            </div>
+
+            <a href="#projects" class="btn btn-secondary btn-sm">
+              See What I Build
+              <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-        <form onsubmit="sendEmail(); reset();return false;" class="form">
-          <div class="input-group">
-            <input
-              type="text "
-              id="name "
-              class="input-group_input"
-              required
-              placeholder="Username "
-            /><br />
-            <input
-              type="email "
-              id="email "
-              class="input-group_input"
-              required
-              placeholder="contact@gmail.com "
-            />
-            <label for="email " class="input-group_label"></label><br />
-            <button id="btn5"><b>SUBMIT</b></button>
-            <div class="home-section1">
-              <a
-                href="https://www.facebook.com/official_sandesh28/ "
-                style="--1: 7"
-                ><i class="bx bxl-facebook"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/official_sandesh28/ "
-                style="--1: 8"
-                ><i class="bx bxl-instagram"></i
-              ></a>
-              <a href="https://wa.link/piyl7c" style="--1: 9"
-                ><i class="bx bxl-whatsapp"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/sandesh-dadibude-2b57ba250/ "
-                style="--1: 10"
-                ><i class="bx bxl-linkedin"></i
-              ></a>
-              <a href="https://github.com/Dadibudesandesh" style="--1: 11"
-                ><i class="bx bxl-github"></i
-              ></a>
+      </section>
+
+      <!-- =========================================================
+     ACHIEVEMENTS SECTION
+========================================================= -->
+      <section
+        class="achievements section"
+        id="achievements"
+        aria-labelledby="achievements-title"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label">Achievements</span>
+
+            <h2 class="section-title" id="achievements-title">
+              Milestones that
+              <span class="gradient-text"> keep me moving forward. </span>
+            </h2>
+
+            <p class="section-description">
+              A few milestones from my academic and development journey that
+              reflect my curiosity, problem-solving mindset, and willingness to
+              build and compete.
+            </p>
+          </div>
+
+          <!-- =====================================================
+             ACHIEVEMENTS GRID
+        ====================================================== -->
+          <div class="achievements-grid">
+            <!-- =================================================
+                 ACHIEVEMENT 01 — MINDSWIPPER
+            ================================================== -->
+            <article
+              class="achievement-card achievement-featured achievement-clickable reveal reveal-left"
+              data-certificate-modal
+              data-certificate-title="MindSwipper — First Prize"
+              data-certificate-category="Competition Achievement"
+              data-certificate-image="images/achievements/mindswipper.jpg"
+              tabindex="0"
+              role="button"
+              aria-label="Open MindSwipper First Prize certificate"
+            >
+              <div class="achievement-card-glow"></div>
+
+              <div class="achievement-image-wrapper">
+                <div class="achievement-image">
+                  <img
+                    src="images/achievements/mindswipper.jpg"
+                    alt="MindSwipper competition achievement"
+                    loading="lazy"
+                  />
+                </div>
+
+                <span class="achievement-image-badge">
+                  <i class="bx bx-trophy" aria-hidden="true"></i>
+                  1st Prize
+                </span>
+              </div>
+
+              <div class="achievement-content">
+                <div class="achievement-top">
+                  <span class="achievement-category"> Competition </span>
+
+                  <span class="achievement-icon">
+                    <i class="bx bx-trophy" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <h3>MindSwipper — First Prize</h3>
+
+                <p>
+                  Secured first prize in the MindSwipper event, demonstrating
+                  problem-solving ability, competitive thinking, and the
+                  confidence to apply technical knowledge under pressure.
+                </p>
+
+                <div class="achievement-footer">
+                  <span class="achievement-status">
+                    <span class="status-dot"></span>
+                    Winner
+                  </span>
+
+                  <span class="achievement-value"> 01 </span>
+                </div>
+                <div class="achievement-view-certificate">
+                  <i class="bx bx-expand-alt" aria-hidden="true"></i>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 ACHIEVEMENT 02 — HACKFEST
+            ================================================== -->
+            <article
+              class="achievement-card achievement-clickable reveal reveal-right"
+              data-certificate-modal
+              data-certificate-title="Hackfest — Winner"
+              data-certificate-category="Hackathon Achievement"
+              data-certificate-image="images/achievements/hackfest.jpg"
+              tabindex="0"
+              role="button"
+              aria-label="Open Hackfest Winner certificate"
+            >
+              <div class="achievement-card-glow"></div>
+
+              <div class="achievement-image-wrapper">
+                <div class="achievement-image">
+                  <img
+                    src="images/achievements/hackfest.jpg"
+                    alt="Hackfest achievement"
+                    loading="lazy"
+                  />
+                </div>
+
+                <span class="achievement-image-badge">
+                  <i class="bx bx-code-block" aria-hidden="true"></i>
+                  Winner
+                </span>
+              </div>
+
+              <div class="achievement-content">
+                <div class="achievement-top">
+                  <span class="achievement-category"> Hackathon </span>
+
+                  <span class="achievement-icon">
+                    <i class="bx bx-code-block" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <h3>Hackfest — Winner</h3>
+
+                <p>
+                  Won a Hackfest challenge by working on a practical problem and
+                  turning an idea into a working solution through collaboration,
+                  implementation, and problem-solving.
+                </p>
+
+                <div class="achievement-footer">
+                  <span class="achievement-status">
+                    <i class="bx bx-check-circle" aria-hidden="true"></i>
+                    Winner
+                  </span>
+
+                  <span class="achievement-value"> 02 </span>
+                </div>
+                <div class="achievement-view-certificate">
+                  <i class="bx bx-expand-alt" aria-hidden="true"></i>
+                  <span>View Certificate</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- =================================================
+                 ACHIEVEMENT 03 — BUILT FROM SCRATCH
+            ================================================== -->
+            <article
+              class="achievement-card achievement-featured achievement-clickable reveal reveal-left"
+              data-certificate-modal
+              data-certificate-title="MindSwipper — First Prize"
+              data-certificate-category="Competition Achievement"
+              data-certificate-image="images/achievements/mindswipper.jpg"
+              tabindex="0"
+              role="button"
+              aria-label="Open MindSwipper First Prize certificate"
+            >
+              <div class="achievement-build-pattern"></div>
+
+              <div class="achievement-build-icon">
+                <i class="bx bx-code-alt" aria-hidden="true"></i>
+              </div>
+
+              <div class="achievement-content">
+                <div class="achievement-top">
+                  <span class="achievement-category"> Personal Milestone </span>
+
+                  <span class="achievement-icon">
+                    <i class="bx bx-git-branch" aria-hidden="true"></i>
+                  </span>
+                </div>
+
+                <h3>Built My Portfolio From Scratch</h3>
+
+                <p>
+                  Started with a simple portfolio and gradually evolved it
+                  through multiple iterations, learning HTML, CSS, JavaScript,
+                  responsive design, Git, deployment, and better software
+                  structure along the way.
+                </p>
+
+                <div class="achievement-stack">
+                  <span>
+                    <i class="bx bx-check" aria-hidden="true"></i>
+                    HTML
+                  </span>
+
+                  <span>
+                    <i class="bx bx-check" aria-hidden="true"></i>
+                    CSS
+                  </span>
+
+                  <span>
+                    <i class="bx bx-check" aria-hidden="true"></i>
+                    JavaScript
+                  </span>
+
+                  <span>
+                    <i class="bx bx-check" aria-hidden="true"></i>
+                    Git
+                  </span>
+
+                  <span>
+                    <i class="bx bx-check" aria-hidden="true"></i>
+                    Deployment
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- =====================================================
+             ACHIEVEMENT PHILOSOPHY
+        ====================================================== -->
+          <div class="achievements-note reveal">
+            <div class="achievements-note-icon">
+              <i class="bx bx-trending-up" aria-hidden="true"></i>
+            </div>
+
+            <div class="achievements-note-content">
+              <span class="achievements-note-label"> More Than Awards </span>
+
+              <p>
+                Every milestone represents something I learned — solving
+                problems under pressure, building with a team, taking ideas from
+                concept to implementation, and continuously improving how I
+                approach software.
+              </p>
             </div>
           </div>
-          <textarea
-            name="feedback "
-            id="textarea "
-            class="input-group_input"
-            cols="30 "
-            rows="10 "
-            placeholder="Write a Message......... "
-          ></textarea>
-        </form>
+        </div>
       </section>
+
+      <!-- =========================================================
+     CERTIFICATE MODAL
+========================================================= -->
+      <div
+        class="certificate-modal"
+        id="certificate-modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="certificate-modal-title"
+      >
+        <div class="certificate-modal-backdrop"></div>
+
+        <div class="certificate-modal-container">
+          <!-- Modal Header -->
+          <div class="certificate-modal-header">
+            <div class="certificate-modal-heading">
+              <span
+                class="certificate-modal-category"
+                id="certificate-modal-category"
+              >
+                Achievement
+              </span>
+
+              <h2 id="certificate-modal-title">Certificate</h2>
+            </div>
+
+            <button
+              type="button"
+              class="certificate-modal-close"
+              id="certificate-modal-close"
+              aria-label="Close certificate"
+            >
+              <i class="bx bx-x" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Certificate Preview -->
+          <div class="certificate-modal-body">
+            <div
+              class="certificate-modal-image-wrapper"
+              id="certificate-modal-image-wrapper"
+            >
+              <!-- Loading State -->
+              <div
+                class="certificate-image-state certificate-image-loading"
+                id="certificate-image-loading"
+                aria-live="polite"
+              >
+                <span class="certificate-spinner" aria-hidden="true"></span>
+
+                <p>Loading certificate...</p>
+              </div>
+
+              <!-- Success State -->
+              <img
+                id="certificate-modal-image"
+                class="certificate-modal-image"
+                src=""
+                alt=""
+              />
+
+              <!-- Error / Missing State -->
+              <div
+                class="certificate-image-state certificate-image-error"
+                id="certificate-image-error"
+                aria-live="polite"
+                hidden
+              >
+                <div class="certificate-error-icon">
+                  <i class="bx bx-image-alt" aria-hidden="true"></i>
+                </div>
+
+                <h3>Certificate unavailable</h3>
+
+                <p>
+                  The certificate image could not be loaded. Please add the
+                  certificate file to the portfolio assets and try again.
+                </p>
+
+                <span
+                  class="certificate-error-path"
+                  id="certificate-error-path"
+                >
+                  Image not found
+                </span>
+
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm certificate-retry-btn"
+                  id="certificate-retry"
+                >
+                  <i class="bx bx-refresh" aria-hidden="true"></i>
+                  Retry Loading
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="certificate-modal-footer">
+            <span class="certificate-modal-hint">
+              <i class="bx bx-info-circle" aria-hidden="true"></i>
+              Press Esc or click outside to close
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+     CURRENTLY LEARNING SECTION
+========================================================= -->
+      <section
+        class="learning section"
+        id="learning"
+        aria-labelledby="learning-title"
+      >
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-label">Currently Learning</span>
+
+            <h2 class="section-title" id="learning-title">
+              Always learning.
+              <span class="gradient-text"> Always improving. </span>
+            </h2>
+
+            <p class="section-description">
+              I am continuously strengthening my backend development skills
+              while expanding my understanding of cloud, system design, frontend
+              development, and software engineering practices.
+            </p>
+          </div>
+
+          <div class="learning-layout">
+            <!-- Main Learning Card -->
+            <article class="learning-main card reveal reveal-left">
+              <div class="learning-main-header">
+                <div class="learning-main-icon">
+                  <i class="bx bx-code-curly" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="learning-main-label"> Primary Focus </span>
+
+                  <h3>Advanced Java &amp; Spring Boot</h3>
+                </div>
+              </div>
+
+              <p class="learning-main-description">
+                Deepening my understanding of Java and Spring Boot to build
+                cleaner, scalable, maintainable, and production-ready backend
+                applications.
+              </p>
+
+              <div class="learning-focus-list">
+                <div class="learning-focus-item">
+                  <i class="bx bx-check" aria-hidden="true"></i>
+                  <span>Advanced Java</span>
+                </div>
+
+                <div class="learning-focus-item">
+                  <i class="bx bx-check" aria-hidden="true"></i>
+                  <span>Spring Boot</span>
+                </div>
+
+                <div class="learning-focus-item">
+                  <i class="bx bx-check" aria-hidden="true"></i>
+                  <span>REST API Design</span>
+                </div>
+
+                <div class="learning-focus-item">
+                  <i class="bx bx-check" aria-hidden="true"></i>
+                  <span>Spring Data JPA</span>
+                </div>
+
+                <div class="learning-focus-item">
+                  <i class="bx bx-check" aria-hidden="true"></i>
+                  <span>Authentication &amp; Security</span>
+                </div>
+
+                <div class="learning-focus-item">
+                  <i class="bx bx-check" aria-hidden="true"></i>
+                  <span>Backend Architecture</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Secondary Learning Areas -->
+            <div class="learning-secondary">
+              <article class="learning-card card reveal reveal-right">
+                <div class="learning-card-icon">
+                  <i class="bx bx-server" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="learning-card-number"> 01 </span>
+
+                  <h3>System Design</h3>
+
+                  <p>
+                    Learning how to design reliable and scalable software
+                    systems.
+                  </p>
+                </div>
+              </article>
+
+              <article class="learning-card card reveal reveal-right">
+                <div class="learning-card-icon">
+                  <i class="bx bx-cloud" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="learning-card-number"> 02 </span>
+
+                  <h3>Docker &amp; Cloud</h3>
+
+                  <p>
+                    Improving my understanding of containers, deployment, AWS,
+                    and cloud workflows.
+                  </p>
+                </div>
+              </article>
+
+              <article class="learning-card card reveal reveal-right">
+                <div class="learning-card-icon">
+                  <i class="bx bx-brain" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="learning-card-number"> 03 </span>
+
+                  <h3>DSA</h3>
+
+                  <p>
+                    Strengthening algorithmic thinking and problem-solving for
+                    development and interviews.
+                  </p>
+                </div>
+              </article>
+
+              <article class="learning-card card reveal reveal-right">
+                <div class="learning-card-icon">
+                  <i class="bx bx-devices" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                  <span class="learning-card-number"> 04 </span>
+
+                  <h3>React</h3>
+
+                  <p>
+                    Improving frontend skills to build better full-stack
+                    applications.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Learning Roadmap -->
+          <div class="learning-roadmap reveal">
+            <div class="learning-roadmap-header">
+              <div>
+                <span class="learning-roadmap-label">
+                  Development Direction
+                </span>
+
+                <h3>My current learning path</h3>
+              </div>
+
+              <span class="learning-roadmap-status">
+                <span class="status-dot"></span>
+                In Progress
+              </span>
+            </div>
+
+            <div class="learning-roadmap-track">
+              <div class="learning-roadmap-step active">
+                <span class="learning-roadmap-dot"></span>
+                <span>Java</span>
+              </div>
+
+              <div class="learning-roadmap-line"></div>
+
+              <div class="learning-roadmap-step active">
+                <span class="learning-roadmap-dot"></span>
+                <span>Spring Boot</span>
+              </div>
+
+              <div class="learning-roadmap-line"></div>
+
+              <div class="learning-roadmap-step active">
+                <span class="learning-roadmap-dot"></span>
+                <span>REST APIs</span>
+              </div>
+
+              <div class="learning-roadmap-line"></div>
+
+              <div class="learning-roadmap-step">
+                <span class="learning-roadmap-dot"></span>
+                <span>System Design</span>
+              </div>
+
+              <div class="learning-roadmap-line"></div>
+
+              <div class="learning-roadmap-step">
+                <span class="learning-roadmap-dot"></span>
+                <span>Cloud &amp; DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+     CONTACT SECTION
+========================================================= -->
+      <section
+        class="contact section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header reveal">
+            <span class="section-label">Contact</span>
+
+            <h2 class="section-title" id="contact-title">
+              Let's build something
+              <span class="gradient-text"> useful together. </span>
+            </h2>
+
+            <p class="section-description">
+              Have an idea, opportunity, project, or simply want to connect?
+              Feel free to reach out. I'm always open to meaningful
+              conversations around software and technology.
+            </p>
+          </div>
+
+          <!-- Contact Layout -->
+          <div class="contact-layout">
+            <!-- =================================================
+                 CONTACT INFORMATION
+            ================================================== -->
+            <div class="contact-info reveal reveal-left">
+              <div class="contact-intro">
+                <span class="contact-intro-label"> Let's Talk </span>
+
+                <h3>Have an idea or opportunity?</h3>
+
+                <p>
+                  Whether you're looking for a Java &amp; Spring Boot developer,
+                  want to discuss a project, or simply want to connect, I'd be
+                  happy to hear from you.
+                </p>
+              </div>
+
+              <!-- Email -->
+              <a
+                href="mailto:sandeshdadibude28042004@gmail.com"
+                class="contact-method"
+              >
+                <span class="contact-method-icon">
+                  <i class="bx bx-envelope" aria-hidden="true"></i>
+                </span>
+
+                <span class="contact-method-content">
+                  <span class="contact-method-label"> Email </span>
+
+                  <span class="contact-method-value">
+                    sandeshdadibude28042004@gmail.com
+                  </span>
+                </span>
+
+                <i
+                  class="bx bx-right-arrow-alt contact-method-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/sandesh-dadibude-2b57ba250/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-method"
+              >
+                <span class="contact-method-icon">
+                  <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                </span>
+
+                <span class="contact-method-content">
+                  <span class="contact-method-label"> LinkedIn </span>
+
+                  <span class="contact-method-value"> Connect with me </span>
+                </span>
+
+                <i
+                  class="bx bx-right-arrow-alt contact-method-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <!-- GitHub -->
+              <a
+                href="https://github.com/Dadibudesandesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-method"
+              >
+                <span class="contact-method-icon">
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </span>
+
+                <span class="contact-method-content">
+                  <span class="contact-method-label"> GitHub </span>
+
+                  <span class="contact-method-value">
+                    Explore my projects
+                  </span>
+                </span>
+
+                <i
+                  class="bx bx-right-arrow-alt contact-method-arrow"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <!-- Availability -->
+              <div class="contact-availability">
+                <span class="contact-availability-dot">
+                  <span class="status-dot"></span>
+                </span>
+
+                <div>
+                  <strong> Open to opportunities </strong>
+
+                  <p>
+                    Java &amp; Spring Boot Developer roles, internships, and
+                    interesting projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                 CONTACT FORM
+            ================================================== -->
+            <div class="contact-form-wrapper card reveal reveal-right">
+              <div class="contact-form-header">
+                <span class="contact-form-label"> Send a Message </span>
+
+                <h3>Start a conversation.</h3>
+
+                <p>
+                  Fill in the details below and I'll get back to you as soon as
+                  possible.
+                </p>
+              </div>
+
+              <form class="contact-form" id="contact-form" novalidate>
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="contact-name"> Name </label>
+
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                    minlength="2"
+                  />
+
+                  <span
+                    class="form-error"
+                    id="contact-name-error"
+                    aria-live="polite"
+                  ></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label for="contact-email"> Email </label>
+
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                  />
+
+                  <span
+                    class="form-error"
+                    id="contact-email-error"
+                    aria-live="polite"
+                  ></span>
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                  <label for="contact-subject"> Subject </label>
+
+                  <input
+                    type="text"
+                    id="contact-subject"
+                    name="subject"
+                    placeholder="What would you like to discuss?"
+                    required
+                    minlength="3"
+                  />
+
+                  <span
+                    class="form-error"
+                    id="contact-subject-error"
+                    aria-live="polite"
+                  ></span>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                  <div class="form-label-row">
+                    <label for="contact-message"> Message </label>
+
+                    <span
+                      class="form-character-count"
+                      id="contact-message-count"
+                    >
+                      0 / 1000
+                    </span>
+                  </div>
+
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="6"
+                    maxlength="1000"
+                    placeholder="Tell me about your idea, opportunity, or project..."
+                    required
+                    minlength="10"
+                  ></textarea>
+
+                  <span
+                    class="form-error"
+                    id="contact-message-error"
+                    aria-live="polite"
+                  ></span>
+                </div>
+
+                <!-- Form Status -->
+                <div
+                  class="contact-form-status"
+                  id="contact-form-status"
+                  role="status"
+                  aria-live="polite"
+                  hidden
+                ></div>
+
+                <!-- Submit -->
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg contact-submit"
+                  id="contact-submit"
+                >
+                  <span class="contact-submit-text"> Send Message </span>
+
+                  <span class="contact-submit-loading" hidden>
+                    <span class="contact-submit-spinner"></span>
+                    Sending...
+                  </span>
+
+                  <i class="bx bx-send" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =========================================================
+     FOOTER
+========================================================= -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-main">
+            <!-- Brand -->
+            <div class="footer-brand">
+              <a
+                href="#home"
+                class="footer-logo"
+                aria-label="Sandesh Dadibude - Home"
+              >
+                Sandesh<span>.dev</span>
+              </a>
+
+              <p>
+                Java &amp; Spring Boot Developer building reliable software with
+                a quality mindset.
+              </p>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <span class="footer-nav-title"> Navigate </span>
+
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#achievements">Achievements</a>
+              <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Social -->
+            <div class="footer-social">
+              <span class="footer-nav-title"> Connect </span>
+
+              <div class="footer-social-links">
+                <a
+                  href="https://github.com/Dadibudesandesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/sandesh-dadibude-2b57ba250/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                </a>
+
+                <a
+                  href="mailto:sandeshdadibude28042004@gmail.com"
+                  aria-label="Email"
+                >
+                  <i class="bx bx-envelope" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="footer-bottom">
+            <p>© 2026 Sandesh Dadibude. Built with curiosity, code, and ☕.</p>
+
+            <a href="#home" class="footer-back-top">
+              Back to top
+              <i class="bx bx-up-arrow-alt" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js "></script>
-    <script>
-      var typed = new Typed("#element ", {
-        strings: [
-          "Java Developer ",
-          "Full Stack Developer ",
-          "Backend Developer ",
-          "SpringBoot Developer  ",
-        ],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true,
-      });
-
-      function sendEmail() {
-        Email.send({
-          Host: "smtp.gmail.com",
-          Username: "sandeshdadibude28042004@gmail.com",
-          To: "sandeshdadibude28042004@gmail.com",
-          From: document.getElementById(email).value,
-          Subject: "New",
-          Body:
-            "Name : " +
-            document.getElementById(name).value +
-            "<br> Email : " +
-            document.getElementById(email).value +
-            "<br> Message : " +
-            document.getElementById(textarea).value,
-        }).then((message) => alert("message send succesfully"));
-      }
-    </script>
-
-    <script type="text/javascript">
-      window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY | 0);
-      });
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/animations.js"></script>
   </body>
 </html>
