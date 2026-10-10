@@ -744,33 +744,124 @@ document.addEventListener(
    CONTACT FORM
 ========================================================= */
 
-const contactForm = document.querySelector(
-    "#contact-form"
-);
+/* =========================================================
+   FORMSPREE CONTACT FORM SUBMISSION
+========================================================= */
 
-const contactSubmit = document.querySelector(
-    "#contact-submit"
-);
-
-const contactSubmitText = document.querySelector(
+const contactForm = document.querySelector("#contact-form");
+const contactSubmit = document.querySelector("#contact-submit");
+const contactSubmitText = contactSubmit?.querySelector(
     ".contact-submit-text"
 );
-
-const contactSubmitLoading = document.querySelector(
+const contactSubmitLoading = contactSubmit?.querySelector(
     ".contact-submit-loading"
 );
-
 const contactFormStatus = document.querySelector(
     "#contact-form-status"
 );
 
-const contactMessage = document.querySelector(
-    "#contact-message"
-);
+function setContactLoading(isLoading) {
+    if (!contactSubmit) return;
 
-const contactMessageCount = document.querySelector(
-    "#contact-message-count"
-);
+    contactSubmit.disabled = isLoading;
+
+    if (contactSubmitText) {
+        contactSubmitText.hidden = isLoading;
+    }
+
+    if (contactSubmitLoading) {
+        contactSubmitLoading.hidden = !isLoading;
+    }
+}
+
+function displayContactStatus(message, type) {
+    if (!contactFormStatus) return;
+
+    contactFormStatus.textContent = message;
+    contactFormStatus.classList.remove("success", "error");
+    contactFormStatus.classList.add(type);
+    contactFormStatus.hidden = false;
+}
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // Reuse your existing validation function.
+        if (
+            typeof validateContactForm === "function" &&
+            !validateContactForm()
+        ) {
+            return;
+        }
+
+        setContactLoading(true);
+
+        if (contactFormStatus) {
+            contactFormStatus.hidden = true;
+        }
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (!response.ok) {
+                let message = "Message could not be sent. Please try again.";
+
+                try {
+                    const result = await response.json();
+
+                    if (result.errors?.length) {
+                        message = result.errors
+                            .map((item) => item.message)
+                            .join(" ");
+                    }
+                } catch {
+                    // Keep the default error message.
+                }
+
+                displayContactStatus(message, "error");
+                return;
+            }
+
+            contactForm.reset();
+
+            const characterCount = document.querySelector(
+                "#contact-message-count"
+            );
+
+            if (characterCount) {
+                characterCount.textContent = "0 / 1000";
+            }
+
+            if (typeof clearAllFormErrors === "function") {
+                clearAllFormErrors();
+            }
+
+            displayContactStatus(
+                "Thank you! Your message has been sent successfully.",
+                "success"
+            );
+
+        } catch (error) {
+            console.error("Contact form submission failed:", error);
+
+            displayContactStatus(
+                "Network error. Please check your connection and try again.",
+                "error"
+            );
+
+        } finally {
+            setContactLoading(false);
+        }
+    });
+}
+
 
 
 /* =========================================================
@@ -1086,105 +1177,105 @@ Object.values(contactFields).forEach(
    CONTACT FORM SUBMIT
 ========================================================= */
 
-if (contactForm) {
+// if (contactForm) {
 
-    contactForm.addEventListener(
-        "submit",
-        (event) => {
+//     contactForm.addEventListener(
+//         "submit",
+//         (event) => {
 
-            event.preventDefault();
-
-
-            /*
-             * Validate before attempting submission.
-             */
-            if (!validateContactForm()) {
-
-                const firstInvalidField =
-                    document.querySelector(
-                        ".contact-form .is-invalid"
-                    );
-
-                if (firstInvalidField) {
-                    firstInvalidField.focus();
-                }
-
-                return;
-            }
+//             event.preventDefault();
 
 
-            const name =
-                contactFields.name.input.value.trim();
+//             /*
+//              * Validate before attempting submission.
+//              */
+//             if (!validateContactForm()) {
 
-            const email =
-                contactFields.email.input.value.trim();
+//                 const firstInvalidField =
+//                     document.querySelector(
+//                         ".contact-form .is-invalid"
+//                     );
 
-            const subject =
-                contactFields.subject.input.value.trim();
+//                 if (firstInvalidField) {
+//                     firstInvalidField.focus();
+//                 }
 
-            const message =
-                contactFields.message.input.value.trim();
-
-
-            /*
-             * Show loading state briefly.
-             *
-             * Replace the mailto section below with
-             * your production form API when available.
-             */
-            setContactSubmitLoading(true);
-            clearContactStatus();
+//                 return;
+//             }
 
 
-            /*
-             * Build email body.
-             */
-            const emailBody =
-                `Hello Sandesh,
+//             const name =
+//                 contactFields.name.input.value.trim();
 
-Name: ${name}
-Email: ${email}
+//             const email =
+//                 contactFields.email.input.value.trim();
 
-Message:
-${message}
+//             const subject =
+//                 contactFields.subject.input.value.trim();
 
-Sent from Sandesh Dadibude's portfolio.`;
+//             const message =
+//                 contactFields.message.input.value.trim();
 
 
-            /*
-             * Use the verified portfolio email.
-             */
-            const mailtoUrl =
-                `mailto:sandeshdadibude28042004@gmail.com` +
-                `?subject=${encodeURIComponent(subject)}` +
-                `&body=${encodeURIComponent(emailBody)}`;
+//             /*
+//              * Show loading state briefly.
+//              *
+//              * Replace the mailto section below with
+//              * your production form API when available.
+//              */
+//             setContactSubmitLoading(true);
+//             clearContactStatus();
 
 
-            /*
-             * Open the visitor's email client.
-             */
-            window.location.href =
-                mailtoUrl;
+//             /*
+//              * Build email body.
+//              */
+//             const emailBody =
+//                 `Hello Sandesh,
+
+// Name: ${name}
+// Email: ${email}
+
+// Message:
+// ${message}
+
+// Sent from Sandesh Dadibude's portfolio.`;
 
 
-            /*
-             * Restore button state.
-             */
-            window.setTimeout(
-                () => {
+//             /*
+//              * Use the verified portfolio email.
+//              */
+//             const mailtoUrl =
+//                 `mailto:sandeshdadibude28042004@gmail.com` +
+//                 `?subject=${encodeURIComponent(subject)}` +
+//                 `&body=${encodeURIComponent(emailBody)}`;
 
-                    setContactSubmitLoading(false);
 
-                    showContactStatus(
-                        "success",
-                        "Your email client should open now. If it doesn't, please email me directly."
-                    );
+//             /*
+//              * Open the visitor's email client.
+//              */
+//             window.location.href =
+//                 mailtoUrl;
 
-                },
-                700
-            );
 
-        }
-    );
+//             /*
+//              * Restore button state.
+//              */
+//             window.setTimeout(
+//                 () => {
 
-}
+//                     setContactSubmitLoading(false);
+
+//                     showContactStatus(
+//                         "success",
+//                         "Your email client should open now. If it doesn't, please email me directly."
+//                     );
+
+//                 },
+//                 700
+//             );
+
+//         }
+//     );
+
+// }
